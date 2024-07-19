@@ -1,0 +1,14 @@
+/* styles.css */
+.navbar-shadow {
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-sticky {
+    position: sticky;
+    top: 0;
+    height: 90px;
+    align-content: center;
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 999;
+  }
+  

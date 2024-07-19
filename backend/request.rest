@@ -1,0 +1,86 @@
+GET http://localhost:5000/players
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5ZXJJRCI6MTksIm5hbWUiOiJNIEZpa3JpIDIiLCJlbWFpbCI6IjEyM0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxOTQxODU1NywiZXhwIjoxNzE5NDE4NTc3fQ.iWPc0UUN1Sfh6UdTNibTzzQkHdK7DQAfUIBeZFfexf0
+###
+POST http://localhost:5000/players
+Content-Type: application/json
+
+{
+    "name" : "M Fikri 2",
+    "email" : "123@gmail.com",
+    "password" : "123456",
+    "confirmPassword" : "123456"
+}
+
+###
+POST http://localhost:5000/cart
+Content-Type: application/json
+
+{
+    "id_player" : "2",
+    "ProductName" : "123456",
+    "gambar" : "123456",
+    "quantity" : "123456",
+    "price" : "123456"
+}
+
+
+###
+DELETE http://localhost:5000/cart/
+
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "user@gmail.com",
+    "password" : "user123"
+}
+
+###
+GET http://localhost:5000/api/transactionsAll
+
+###
+DELETE  http://localhost:5000/logout
+
+###
+GET http://localhost:5000/Products
+
+###
+POST http://localhost:5000/Products
+Content-Type: application/json
+
+{
+    "ProductName" : "aaaa",
+    "Gambar" : "msew",
+    "Quantity" : "mew",
+    "Price": "222222222222",
+    "Description" : "aaaaaaaaaaaaaaaa"
+}
+
+
+###
+PATCH  http://localhost:5000/Products/1
+Content-Type: application/json
+
+{
+    "ProductName" : "ssssss",
+    "Gambar" : "ssssss",
+    "Quantity": "123",
+    "Price": "222222222222",
+    "Description" : "aaaaaaaaaaaaaaaa"
+}
+
+###
+PATCH  http://localhost:5000/users/1
+Content-Type: application/json
+
+{
+    "username" : "Putra s",
+    "password": "123",
+    "email": "putrass@gmail.com",
+    "address" : "Bintaro"
+}
+
+###
+DELETE   http://localhost:5000/Products/3
