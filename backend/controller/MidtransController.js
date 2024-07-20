@@ -2,7 +2,6 @@ import MidtransRoute from 'midtrans-client';
 import Transaction from '../models/TransactionModel.js';
 import TransactionItem from '../models/TransactionItemModel.js';
 import Pusher from 'pusher';
-import cron from 'node-cron';
 
 const pusher = new Pusher({
   appId: "1835149",
@@ -14,8 +13,8 @@ const pusher = new Pusher({
 
 let snap = new MidtransRoute.Snap({
   isProduction: false,
-  serverKey: "YOUR_SERVER_KEY", 
-  clientKey: "YOUR_CLIENT_KEY" 
+  serverKey: "SB-Mid-server-dqELOdaotYXB-Gaf6SA62D6n", 
+  clientKey: "SB-Mid-client-nXhYb5UJXVoITAP7" 
 });
 
 export const createTransaction = async (req, res) => {
@@ -129,28 +128,6 @@ export const handleNotification = async (req, res) => {
       res.status(500).send(error.message);
   }
 };
-
-const updatePendingTransactions = async () => {
-  const now = new Date();
-  const transactions = await Transaction.findAll({ where: { payment_status: 'pending' } });
-
-  transactions.forEach(async (transaction) => {
-    const transactionAge = now - new Date(transaction.created_at);
-    const oneDay = 24 * 60 * 60 * 1000; 
-
-    if (transactionAge >= oneDay) {
-      transaction.payment_status = 'expire';
-      await transaction.save();
-      console.log(`Updated transaction ${transaction.order_id} to expire.`);
-    }
-  });
-};
-
-cron.schedule('0 * * * *', () => {
-  console.log('Running cron job to update pending transactions.');
-  updatePendingTransactions();
-});
-
 
 export const cancelTransaction = async (req, res) => {
   const { order_id } = req.body;

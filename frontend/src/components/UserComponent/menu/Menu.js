@@ -48,7 +48,7 @@ const Menu = () => {
   };
 
   const formatPrice = (price) => {
-    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(price);
+    return `IDR ${new Intl.NumberFormat('id-ID', { style: 'decimal' }).format(price)}`;
   };
 
   const addToCart = async (product) => {
@@ -140,7 +140,7 @@ const Menu = () => {
       </div>
 
       <div className="container mx-auto flex justify-center items-center">
-        <div className="grid grid-cols-1 m-0 p-16 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 m-0 mt-16 mb-20 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProducts.length === 0 ? (
             <p className="text-center col-span-full">Tidak ada item yang tersedia</p>
           ) : (

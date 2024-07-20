@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2024 at 08:15 AM
+-- Generation Time: Jul 20, 2024 at 11:47 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -43,11 +43,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `id_player`, `ProductName`, `gambar`, `quantity`, `price`, `createdAt`, `updatedAt`) VALUES
-(126, 21, 'Pizza', 'uploads/1719403214037-image_2024-06-26_185953117.png', 2, '100000', '2024-06-27 09:01:32', '2024-07-15 11:29:40'),
-(127, 21, 'Lumpia Udang', 'uploads/1719216083658-image_2024-06-24_150121997.png', 2, '200000', '2024-06-27 09:01:33', '2024-07-15 16:00:44'),
-(133, 25, 'Pizza', 'uploads/1719403214037-image_2024-06-26_185953117.png', 1, '100000', '2024-07-01 06:17:11', '2024-07-01 06:17:11'),
 (135, 17, 'Lumpia Udang', 'uploads/1719216083658-image_2024-06-24_150121997.png', 1, '200000', '2024-07-02 07:33:42', '2024-07-02 07:33:42'),
-(138, 17, 'Pizza', 'uploads/1719403214037-image_2024-06-26_185953117.png', 1, '100000', '2024-07-12 14:05:17', '2024-07-12 14:05:17');
+(138, 17, 'Pizza', 'uploads/1719403214037-image_2024-06-26_185953117.png', 1, '100000', '2024-07-12 14:05:17', '2024-07-12 14:05:17'),
+(148, 21, 'Risoles Mayo', 'uploads/1721465834086-image_2024-07-20_155549433.png', 3, '25000', '2024-07-20 09:45:19', '2024-07-20 09:45:41');
 
 -- --------------------------------------------------------
 
@@ -76,10 +74,9 @@ CREATE TABLE `players` (
 --
 
 INSERT INTO `players` (`id_player`, `name`, `email`, `password`, `birth`, `gender`, `phone`, `refresh_token`, `role`, `profile`, `address`, `createdAt`, `updatedAt`) VALUES
-(2, 'putra', 'putra@gmail.com', '$2b$10$XXNln8Vdpcly1gU1/1jwbus1ZODALd1R8b.yv7CGmnTq16vLANQHG', '2024-06-06', 'Laki - Laki', '123321232', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5ZXJJRCI6MiwibmFtZSI6InB1dHJhIiwiZW1haWwiOiJwdXRyYUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJhZGRyZXNzIjoiIiwiaWF0IjoxNzIxMzEyNDk3LCJleHAiOjE3MjEzOTg4OTd9.2QHEgNezw4kXEGo8SBVIMKN3It-xYBBOJkDo9raUZg0', 'admin', '0', '', '2024-06-25 16:00:35', '2024-07-18 14:21:37'),
-(17, 'User', 'user@gmail.com', '$2b$10$evdGD3BsVsVDo9BAstKNYupUiZYlH8sScwH7hsVAOz18AzInKzYz2', '2024-06-01', 'Laki - Laki', '222222222222', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5ZXJJRCI6MTcsIm5hbWUiOiJVc2VyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiYWRkcmVzcyI6IkFsYW1hdCBCYXJ1XG4iLCJpYXQiOjE3MjExODkyMTIsImV4cCI6MTcyMTI3NTYxMn0.n86TkFGsPH6v3a8Hmxr9D7gZ6Q7LCZn9ALCyzF3wRwc', 'user', 'profile-img\\profileImage-1719831030890.jpg', 'Alamat Baru\n', '2024-06-26 04:47:39', '2024-07-17 04:06:52'),
-(21, 'aa', 'a@gmail.com', '$2b$10$FkPV2jy19m91uhF38xB7P.SsptwJCuh/hPlEYcsYlngWP6Jzw6AJO', '2024-06-25', 'Perempuan', '2312312312', NULL, 'user', 'profile-img\\profileImage-1721058271038.png', 'aaaaaaaaaaaa', '2024-06-27 06:31:20', '2024-07-18 14:21:30'),
-(25, 'testing', 'test@gmail.com', '$2b$10$ldHnIE6Efvzd.TvBcpiuauNIO.lR8W7ntItTm8yH9t1nZVZJPQs6S', '2024-07-11', 'Laki - Laki', '08770853577', NULL, 'user', 'profile-img\\profileImage-1719812516562.png', '', '2024-07-01 05:16:10', '2024-07-01 10:50:10');
+(2, 'putra', 'putra@gmail.com', '$2b$10$XXNln8Vdpcly1gU1/1jwbus1ZODALd1R8b.yv7CGmnTq16vLANQHG', '2024-06-06', 'Laki - Laki', '123321232', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5ZXJJRCI6MiwibmFtZSI6InB1dHJhIiwiZW1haWwiOiJwdXRyYUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJhZGRyZXNzIjoiIiwiaWF0IjoxNzIxNDYxODU5LCJleHAiOjE3MjE1NDgyNTl9.grWLH6p9DeT5kFRZK-ENyXpxfCXBhV-H5bgK80T5J_s', 'admin', '0', '', '2024-06-25 16:00:35', '2024-07-20 07:50:59'),
+(17, 'User', 'user@gmail.com', '$2b$10$evdGD3BsVsVDo9BAstKNYupUiZYlH8sScwH7hsVAOz18AzInKzYz2', '2024-06-01', 'Laki - Laki', '222222222222', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5ZXJJRCI6MTcsIm5hbWUiOiJVc2VyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiYWRkcmVzcyI6IkFsYW1hdCBCYXJ1XG4iLCJpYXQiOjE3MjE0NjEzNTQsImV4cCI6MTcyMTU0Nzc1NH0.o-UngLmpuJBZalRQl-WEIF3jC-y9IQTciYTPn9LeEWg', 'user', 'profile-img\\profileImage-1719831030890.jpg', 'Alamat Baru\n', '2024-06-26 04:47:39', '2024-07-20 07:42:34'),
+(21, 'aaa ', 'a@gmail.com', '$2b$10$FkPV2jy19m91uhF38xB7P.SsptwJCuh/hPlEYcsYlngWP6Jzw6AJO', '2024-06-25', '', '2312312312', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5ZXJJRCI6MjEsIm5hbWUiOiJhYWEgIiwiZW1haWwiOiJhQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiYWRkcmVzcyI6ImFhYWFhYWFhYWFhYSIsImlhdCI6MTcyMTQ2NDA3NCwiZXhwIjoxNzIxNTUwNDc0fQ.rwjv9ljn0IwZnAzN8Uii6JXOfOHqL9qmgYZ3uBEHruQ', 'user', 'profile-img\\profileImage-1721058271038.png', 'aaaaaaaaaaaa', '2024-06-27 06:31:20', '2024-07-20 09:41:09');
 
 -- --------------------------------------------------------
 
@@ -97,6 +94,23 @@ CREATE TABLE `products` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `ProductName`, `Gambar`, `Quantity`, `Price`, `Description`, `createdAt`, `updatedAt`) VALUES
+(33, 'Risoles Mayo', 'uploads\\1721465834086-image_2024-07-20_155549433.png', '11', '25000', 'Risol mayo adalah camilan lezat dengan isian ayam, sayuran, dan saus mayo creamy. Dibungkus dengan kulit risol tipis dan digoreng hingga renyah, risol mayo cocok untuk camilan atau hidangan pembuka.', '2024-07-20 08:57:14', '2024-07-20 08:57:14'),
+(34, 'Bakso Tahu', 'uploads\\1721465969944-image_2024-07-20_155850168.png', '32', '23499', 'Bakso tahu adalah bola-bola daging yang lembut dan juicy, terbuat dari campuran daging sapi atau ayam dengan tahu yang menggantikan sebagian daging. Dihidangkan dalam kuah kaldu yang gurih, bakso tahu memberikan kombinasi rasa daging yang kaya dan kelembu', '2024-07-20 08:59:29', '2024-07-20 08:59:29'),
+(35, 'Bolen Lilit', 'uploads\\1721466089274-image_2024-07-20_160057475.png', '12', '18000', 'Bolen lilit adalah camilan khas dengan adonan pastry yang renyah dan isian daging cincang yang bumbu khas. Adonan pastry dibentuk menjadi lilitan yang cantik dan diisi dengan campuran daging yang telah dibumbui, lalu dipanggang hingga kecokelatan. Bolen l', '2024-07-20 09:01:29', '2024-07-20 09:01:29'),
+(36, 'Frozen Rolade', 'uploads\\1721466223923-image_2024-07-20_160314795.png', '42', '35000', 'Rolade adalah hidangan daging yang dipotong tipis dan digulung dengan isian yang lezat, seperti campuran daging cincang, sayuran, atau keju. Setelah digulung, rolade biasanya dipanggang atau dimasak dalam saus hingga matang sempurna. Teksturnya yang lembu', '2024-07-20 09:03:43', '2024-07-20 09:03:43'),
+(37, 'Donat Frozen', 'uploads\\1721466370491-image_2024-07-20_160546699.png', '11', '30000', 'Donat adalah kue goreng yang empuk dan manis, berbentuk bulat dengan lubang di tengah. Dikenal dengan tekstur lembut dan rasa manis, donat biasanya dilapisi dengan gula halus, cokelat, atau glasir. Variasi isian seperti selai atau krim juga sering ditamba', '2024-07-20 09:06:10', '2024-07-20 09:08:48'),
+(38, 'Kentang Frozen', 'uploads\\1721466684116-image_2024-07-20_161045476.png', '11', '15000', 'Kentang frozen adalah kentang yang telah dipotong dan dibekukan untuk kemudahan penyimpanan dan persiapan. Biasanya disajikan dalam bentuk kentang goreng, wedges, atau potongan dadu, kentang frozen hanya perlu digoreng atau dipanggang untuk menghasilkan k', '2024-07-20 09:11:24', '2024-07-20 09:11:24'),
+(39, 'Custom Pudding', 'uploads\\1721467032651-image_2024-07-20_161535016.png', '7', '32090', 'Custom pudding adalah pencuci mulut yang dapat disesuaikan dengan berbagai pilihan rasa dan topping sesuai selera. Dibuat dari campuran bahan dasar seperti susu, gula, dan telur, pudding ini memiliki tekstur lembut dan creamy. Dengan pilihan rasa seperti ', '2024-07-20 09:17:12', '2024-07-20 09:17:12'),
+(40, 'Egg Tart (6pcs)', 'uploads\\1721467140218-image_2024-07-20_161810828.png', '2', '43000', 'Egg tart adalah kue kecil yang populer dengan kulit pastry renyah dan isian custard telur yang lembut dan creamy. Kulitnya yang berlapis memberikan tekstur krispi, sementara isian custard yang manis dan lembut menciptakan kombinasi rasa yang memikat. Egg ', '2024-07-20 09:19:00', '2024-07-20 09:19:00'),
+(41, 'Minyak Goreng (2L)', 'uploads\\1721467240079-image_2024-07-20_161934698.png', '8', '39000', ' Tentu! Berikut deskripsi singkat untuk minyak goreng Sunco:  Minyak Goreng Sunco  Minyak Goreng Sunco adalah minyak goreng berkualitas tinggi yang dirancang untuk memberikan hasil gorengan yang renyah dan lezat. Terbuat dari bahan nabati pilihan, minyak ', '2024-07-20 09:20:40', '2024-07-20 09:26:31'),
+(42, 'Peyek Kacang (5L)', 'uploads\\1721467312584-image_2024-07-20_162138729.png', '6', '45000', 'Peyek kacang adalah camilan krispi khas Indonesia yang terbuat dari adonan tepung beras dan bumbu, dicampur dengan kacang tanah. Dihasilkan dengan cara digoreng hingga keemasan, peyek kacang menawarkan tekstur renyah dan rasa gurih yang menggugah selera. ', '2024-07-20 09:21:52', '2024-07-20 09:21:52'),
+(43, 'Cuanki Instan', 'uploads\\1721467357682-image_2024-07-20_162216037.png', '3', '13000', 'Cuanki instan adalah mie kuah siap saji yang praktis dan lezat, terinspirasi dari hidangan cuanki tradisional. Menghadirkan rasa gurih dengan bumbu dan rempah yang khas, cuanki instan biasanya dilengkapi dengan potongan daging, sayuran, dan bakso. Cukup d', '2024-07-20 09:22:37', '2024-07-20 09:22:37');
 
 -- --------------------------------------------------------
 
@@ -127,14 +141,6 @@ CREATE TABLE `transactions` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `transactions`
---
-
-INSERT INTO `transactions` (`transaction_id`, `order_id`, `gross_amount`, `customer_name`, `customer_email`, `customer_phone`, `customer_address`, `payment_status`, `payment_method`, `created_at`) VALUES
-(183, 'ORDER-1721309944347', '625500.00', 'aa', 'a@gmail.com', '2312312312', 'aaaaaaaaaaaa', '', 'qris', '2024-07-18 13:39:04'),
-(184, 'ORDER-1721309953580', '415300.00', 'aa', 'a@gmail.com', '2312312312', 'aaaaaaaaaaaa', 'Pending', 'cstore', '2024-07-18 13:39:13');
-
 -- --------------------------------------------------------
 
 --
@@ -152,17 +158,6 @@ CREATE TABLE `transaction_items` (
   `sub_total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `transaction_items`
---
-
-INSERT INTO `transaction_items` (`transaction_item_id`, `transaction_id`, `product_id`, `product_name`, `product_image`, `quantity`, `price`, `sub_total`) VALUES
-(531, 183, 126, 'Pizza', 'uploads/1719403214037-image_2024-06-26_185953117.png', 2, '100000.00', '200000.00'),
-(532, 183, 127, 'Lumpia Udang', 'uploads/1719216083658-image_2024-06-24_150121997.png', 2, '200000.00', '400000.00'),
-(533, 183, 0, 'Ongkir', '', 1, '25500.00', '25500.00'),
-(534, 184, 127, 'Lumpia Udang', 'uploads/1719216083658-image_2024-06-24_150121997.png', 2, '200000.00', '400000.00'),
-(535, 184, 0, 'Ongkir', '', 1, '15300.00', '15300.00');
-
 -- --------------------------------------------------------
 
 --
@@ -179,14 +174,6 @@ CREATE TABLE `users` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `address`, `role`, `createdAt`, `updatedAt`) VALUES
-(1, 'Putra s', '123', 'putrass@gmail.com', 'Bintaro', 'customer', '2024-06-23 05:16:32', '2024-06-25 02:46:42'),
-(10, 'admin', 'admin', 'admin@gmail.com', 'xxxxxxxxx', 'admin', '2024-06-24 02:53:34', '2024-06-24 02:53:34');
 
 --
 -- Indexes for dumped tables
@@ -245,31 +232,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT for table `players`
 --
 ALTER TABLE `players`
-  MODIFY `id_player` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_player` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
 
 --
 -- AUTO_INCREMENT for table `transaction_items`
 --
 ALTER TABLE `transaction_items`
-  MODIFY `transaction_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=536;
+  MODIFY `transaction_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=557;
 
 --
 -- AUTO_INCREMENT for table `users`
