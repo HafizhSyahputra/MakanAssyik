@@ -13,8 +13,8 @@ const pusher = new Pusher({
 
 let snap = new MidtransRoute.Snap({
   isProduction: false,
-  serverKey: "SB-Mid-server-dqELOdaotYXB-Gaf6SA62D6n", 
-  clientKey: "SB-Mid-client-nXhYb5UJXVoITAP7" 
+  serverKey: "MIDTRANS_SERVER_KEY", 
+  clientKey: "MIDTRANS_CLIENT_KEY" 
 });
 
 export const createTransaction = async (req, res) => {
